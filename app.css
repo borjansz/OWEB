@@ -20,6 +20,7 @@ time, mark, audio, video {
 }
 html{
     font-family: 'Fira Code', monospace;
+    background-color:#000714;
 }
 
 .logo{
@@ -28,6 +29,13 @@ html{
     padding: 20px 0;
     font-weight: 800;
     margin-left: 0.7em;
+}
+header{
+    position: fixed;
+    width: 100%;
+}
+main{
+    margin-bottom: 30px;
 }
 header::after{
     content:'';
@@ -85,12 +93,10 @@ h1#firstText{
     font-weight: 500;
 }
 span.par{
-    color: #8ac451;
     color: #C0C0C0;
 
 }
 span.bracket{
-    color:#e0721e;
     color: #C0C0C0;
 }
 
@@ -171,6 +177,7 @@ div.CV{
     }
     section.gallery p{
         margin-left:28px;
+        font-weight: 400;
        
     }
     div.galerija {
@@ -195,14 +202,7 @@ div.CV{
         justify-content: center;
         align-items: center;
     }
-    footer{
-        background-color: #000714;
-        height: 500px;
-        color: #C0C0C0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
     section.about{
         background-color: #000714;
         height: 500px;
@@ -228,7 +228,7 @@ div.CV{
         border: 3px groove #000511;
     }
     div.f1{
-        width: 100%;
+        max-width: 100%;
         height: 500px;
         background: url(universe.jpg) no-repeat  center fixed; 
     -webkit-background-size: cover;
@@ -236,7 +236,7 @@ div.CV{
   -o-background-size: cover;
     }
     div.f2{
-        width: 100%;
+        max-width: 100%;
         height: 500px;
         background: url(movies.jpg) no-repeat  center fixed; 
     -webkit-background-size: cover;
@@ -244,7 +244,7 @@ div.CV{
   -o-background-size: cover;
     }
     div.f3{
-        width: 100%;
+        max-width: 100%;
         height: 500px;
         background: url(music.jpg) no-repeat  center fixed; 
     -webkit-background-size: cover;
@@ -257,4 +257,45 @@ div.CV{
     p.favtext{
         text-align: center;
         margin-top:200px;
+    }
+
+    footer{
+        height: 350px;
+        max-width: 100%;
+        background: url("https://images.unsplash.com/photo-1447703693928-9cd89c8d3ac5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80") no-repeat  center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        color: #C0C0C0;
+      text-align: center;
+      border-top:2px outset #3a3a3a;
+      padding-top: 10px;
+    }
+    div.footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:10px 0;
+    }
+    div.footer button{
+        margin:15px 0;
+        font-family: 'Fira Code', monospace;
+        background: none;
+        color:#c0c0c0;
+        border: 2px solid;
+        padding:1em 2em;
+        font-size: 0.7em;
+        transition: color 0.25s,border-color 0.25s,box-shadow 0.25s,transform 0.25s;
+    }
+    div.footer button:hover{
+        border-color:#c0c0c0 ;
+        color:white;
+        box-shadow: 0 0.5em 0.5em -0.4em #c0c0c0;
+        transform: translateY(-0.25em);
+        cursor: pointer;
+    }
+    footer span{
+        font-size: 0.7em;
+        opacity: 0.5;
     }
