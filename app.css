@@ -21,6 +21,47 @@ time, mark, audio, video {
 html{
     font-family: 'Fira Code', monospace;
 }
+
+.logo{
+    float: left;
+    font-size: 1.7em;
+    padding: 20px 0;
+    font-weight: 800;
+    margin-left: 0.7em;
+}
+header::after{
+    content:'';
+    display: table;
+    clear: both;
+}
+nav{
+    float: right;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+nav li{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+}
+nav a{
+    text-decoration: none;
+    color: #C0C0C0;
+    transition: color 0.25s,border-color 0.25s,box-shadow 0.25s,transform 0.25s;
+}
+li:nth-of-type(6){
+    margin-right: 2em;
+}
+nav a:hover{
+    border-color:#C0C0C0 ;
+    color:white;
+    box-shadow: 0 0.5em 0.5em -0.4em #c0c0c0;
+    transform: translateY(0.25em);
+    cursor: pointer;
+}
 header{
     background-color: #000714;
     font-family: 'Fira Code', monospace;
@@ -30,16 +71,17 @@ section.header1{
     width: 100%;
     height:700px;
     /* background: url("https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80") no-repeat center center fixed;  */
-    background: url("https://images.unsplash.com/photo-1617042375876-a13e36732a04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80") no-repeat center center fixed; 
+    background: url("https://images.unsplash.com/photo-1617042375876-a13e36732a04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80") no-repeat  center fixed; 
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top:  5px outset #000511;
 }
 h1#firstText{
-    font-size: 5em;
+    font-size: 3em;
     font-weight: 500;
 }
 span.par{
@@ -57,6 +99,7 @@ section.intro{
     height: 700px;
     display: flex;
     background-color: #000714;
+    border-top:  5px outset #000511;
 
 }
 /* div{
@@ -74,9 +117,7 @@ div.introduction img{
     padding: 50px 0;
  
 }
-div.introduction img:hover{
-    animation: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+
 div.introduction p{
     color: #C0C0C0;
     align-self: center;
@@ -86,23 +127,28 @@ div.introduction p{
 }
 section.cv{
    
-    background-color: #000E29;
+    /* background-color: #000714; */
+    background: linear-gradient(#000714 30%,#C0C0C0);
     text-align: center;
     height: 700px;
-    display: flex;
+    /* display: flex;
    flex-wrap:wrap;
-   align-items: center;
+   align-items: center; */
+   border-top:  1px outset #010c27;
+
+
 }
 #CV{
     color: #C0C0C0;
 }
 h2#CV{
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
     font-size: 3em;
+    margin-bottom: 80px;
+    padding-top:50px
 
 }
 div.CVdiv{
-    background-color: #000E29;
 
     display:flex;
     justify-content: space-evenly;
@@ -125,6 +171,7 @@ div.CV{
     }
     section.gallery p{
         margin-left:28px;
+       
     }
     div.galerija {
       
@@ -163,4 +210,51 @@ div.CV{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    section.about{
+        background-color: #000714;
+        height: 500px;
+        color: #C0C0C0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section.favorite{
+        border-top:  5px outset #000103;
+        color: #C0C0C0;
+        background-color: #000714;
+    }
+    section.favorite div{
+        border: 3px groove #000511;
+    }
+    div.f1{
+        width: 100%;
+        height: 500px;
+        background: url(universe.jpg) no-repeat  center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+    }
+    div.f2{
+        width: 100%;
+        height: 500px;
+        background: url(movies.jpg) no-repeat  center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+    }
+    div.f3{
+        width: 100%;
+        height: 500px;
+        background: url(music.jpg) no-repeat  center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+    }
+    .favorite h3{
+        font-size: 2em;
+    }
+    p.favtext{
+        text-align: center;
+        margin-top:200px;
     }
