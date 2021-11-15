@@ -80,6 +80,7 @@ section.header1{
     height:700px;
     /* background: url("https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80") no-repeat center center fixed;  */
     background: url("https://images.unsplash.com/photo-1617042375876-a13e36732a04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80") no-repeat  center fixed; 
+    /* background: url("https://mcdn.wallpapersafari.com/medium/37/5/mVcIFU.jpg") no-repeat  center fixed;  */
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -189,19 +190,33 @@ div.CV{
       padding: 5px;
     }
     section.gallery img{
-        max-width: 30%;
+        /* max-width: 30%; */
+        width: 500px;
+        height: 500px;
       margin:20px;
       box-sizing: border-box;
       border: 5px outset#7a7a7a;
     }
+
+.post img{
+    display: block;
+}
+textarea{
+    display: block;
+}
     section.blog{
-        background-color: #000714;
-        height: 500px;
-        color: #C0C0C0;
+        /* background-color: #000714; */
+        background: url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80") no-repeat  center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: auto;
+        color: black;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+  
     
     section.about{
         background-color: #000714;
@@ -258,6 +273,58 @@ div.CV{
         text-align: center;
         margin-top:200px;
     }
+.blog form div{
+    margin-bottom: 15px;
+
+}
+.blog form input{
+    margin-top: 5px;
+    border-radius: 25px;
+    font-size: 13px;
+    padding: 8px;
+    font-family: 'Fira Code', monospace;
+    color: black;
+}
+.blog form textarea{
+border-radius: 25px;
+padding: 15px;
+font-size:13px;
+margin:12px 0;
+}
+.blog form{
+    margin-top: 25px;
+    padding: 50px;
+    /* border: 7px groove #c0c0c0; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+   
+   
+}
+
+.blog form button{
+    background-color: #C0C0C0;
+    color: black;
+    border: 2px solid;
+    padding:1em 2em;
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+    transition: color 0.25s,border-color 0.25s,box-shadow 0.25s,transform 0.25s;
+    border-radius: 15px;
+    text-align: center;
+}
+#kopce{
+    align-self: center;
+}
+.blog form button:hover{
+    border-color:#c0c0c0 ;
+    color:white;
+    box-shadow: 0 0.5em 0.5em -0.4em #c0c0c0;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
 
     footer{
         height: 350px;

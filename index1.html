@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inconsolata:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap"
         rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/a1743c748b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -84,28 +84,93 @@
                 </div>
             </div>
         </section>
-
         <section class="gallery" id="Gal">
             <p>&#60;Minimalism&#62;</p>
             <div class="galerija">
-                <img src="https://images.unsplash.com/photo-1522120691812-dcdfb625f397?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
-                    alt="img1">
-                <img src="https://images.unsplash.com/photo-1521206698660-5e077ff6f9c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=386&q=80"
-                    alt="img3">
-                <img src="https://images.unsplash.com/photo-1504418682362-6ad6257cb2fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
-                    alt="img4">
-                <img src="https://images.unsplash.com/photo-1512514076443-1eef59c260b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
-                    alt="img5">
-                <img src="https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=396&q=80"
-                    alt="img6">
-                <img src="https://images.unsplash.com/photo-1598751654513-bd903cff4b0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80"
-                    alt="img7">
-                <img src="https://images.unsplash.com/photo-1617076678363-99dd6eb5150b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
-                    alt="img8">
-                <img src="https://images.unsplash.com/photo-1457062673746-3c8d0b60aa44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
-                    alt="img9">
-                <img src="https://images.unsplash.com/photo-1512433155034-67102234a5e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80"
-                    alt="img2">
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1522120691812-dcdfb625f397?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                        alt="img1">
+                    <button class="likebtn" id="like0">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="commentbtn">
+                        <i class="far fa-comment"></i>
+                    </button>
+                    <input type="number" id="input1" value="0" name="">
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1521206698660-5e077ff6f9c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=386&q=80"
+                        alt="img3">
+                    <button class="likebtn" id="like1">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1504418682362-6ad6257cb2fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+                        alt="img4">
+                    <button class="likebtn" id="like2">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1512514076443-1eef59c260b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+                        alt="img5">
+                    <button class="likebtn" id="like3">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=396&q=80"
+                        alt="img6">
+                    <button class="likebtn" id="like4">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1598751654513-bd903cff4b0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80"
+                        alt="img7">
+                    <button class="likebtn" id="like5">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1617076678363-99dd6eb5150b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                        alt="img8">
+                    <button class="likebtn" id="like6">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                    <!-- <textarea name="" id="" cols="65" rows="2" placeholder="Enter a Comment..."></textarea> -->
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1457062673746-3c8d0b60aa44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+                        alt="img9">
+                    <button class="likebtn" id="like7">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                </div>
+
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1512433155034-67102234a5e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80"
+                        alt="img2">
+                    <button class="likebtn" id="like8">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <i class="far fa-comment"></i>
+                </div>
 
         </section>
         </section>
@@ -126,8 +191,45 @@
                 <p class="favtext">&#60;This section is currently under construction&#62;</p>
             </div>
         </section>
+
+
         <section class="blog" id="Blog">
-            &#60;Blog&Polls (Under Construciton)&#62;
+
+
+            <form action="#">
+                <div>
+                    <p>
+                        <label for="username">Username</label>
+                    </p>
+                    <input type="text" placeholder="johnLocke123" id="username" required>
+                </div>
+                <div>
+                    <p>
+                        <label for="title">Title of the Post</label>
+                    </p>
+                    <input type="text" id="title" placeholder="Philosphy of Life" required>
+
+                </div>
+                <div>
+                    <p>
+                        <label for="spam">1 + 1 =</label>
+                    </p>
+                    <input type="text" placeholder="Antispam Question" id="spam" required>
+
+                </div>
+                <div>
+                    <p>
+                        <label for="blogpost">Content of the Post</label>
+                    </p>
+                    <textarea name="blogp" id="blogpost" cols="80" rows="10"
+                        placeholder="Enter your Content"></textarea>
+                </div>
+
+                <div id="kopce"><button>Submit</button></div>
+
+
+            </form>
+
         </section>
         <section class="about" id="About">
             &#60;About and Contact(Under Construciton)&#62;
