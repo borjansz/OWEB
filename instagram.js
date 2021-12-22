@@ -69,9 +69,16 @@ like8.addEventListener('click', () => {
     brojac8.value = parseInt(brojac8.value) + 1;
     like8.style.color = "red";
 })
+let like9 = document.querySelector('#like9');
+let brojac9 = document.querySelector('#inputs9');
+
+like9.addEventListener('click', () => {
+    brojac9.value = parseInt(brojac9.value) + 1;
+    like9.style.color = "red";
+})
 
 
-var guest = prompt("Hello? Is there anybody in there?", "Your name here");
+var guest = prompt("Enter Your Username", "Username here");
 const onLoad = () => {
     let json1 = [];
     let json2 = [];
@@ -109,8 +116,18 @@ const onLoad = () => {
     document.getElementById("comment7").innerHTML = string7;
     document.getElementById("comment8").innerHTML = string8;
     document.getElementById("comment9").innerHTML = string9;
+    document.getElementById("comment10").innerHTML = string10;
     document.getElementById("likeCounter1").innerHTML = likeNum1;
     document.getElementById("likeCounter2").innerHTML = likeNum2;
+
+    let arr = []
+    arr = JSON.parse(localStorage.getItem('posts')) || [];
+    let tempString = "";
+    arr.forEach(element => {
+        tempString += element
+        tempString += "<hr>"
+    })
+    document.getElementById("submittedDiv").innerHTML = tempString;
 }
 function comment1() {
     event.preventDefault()
@@ -256,3 +273,21 @@ function comment9() {
     });
     document.getElementById("comment9").innerHTML = newString9;
 }
+
+function comment10() {
+    event.preventDefault()
+    let t10 = document.getElementById("input10").value;
+    let comm10 = JSON.parse(localStorage.getItem('comments10')) || [];
+    var datum10 = new Date();
+    t10 = guest + ': ' + t10 + '<br>' + datum10.toUTCString();
+    comm10.push(t10)
+    localStorage.setItem('comments10', JSON.stringify(comm10))
+    console.log(comm10)
+    let newString10 = ""
+    comm10.forEach(element => {
+        newString10 += element
+        newString10 += "<hr>"
+    });
+    document.getElementById("comment10").innerHTML = newString10;
+}
+

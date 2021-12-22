@@ -10,10 +10,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inconsolata:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courier+Prime&family=Fira+Code:wght@300;400;500;600&family=Inconsolata:wght@200;300;400;500;600&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/a1743c748b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        jQuery(function ($) {
+            $("#rss-feeds").rss("https://publicist.mk/rss",
+                {
+                    entryTemplate: '<div class="newsContent"><a href="{url}">{title}</a><br/>{teaserImage}{shortBodyPlain}</div>',
+                    limit: 2
+                });
+        });
+    </script>
+    <script>
+        function previewFile(input) {
+            var file = $("input[type=file]").get(0).files[0];
+            $("#prikaci").hide();
 
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function () {
+                    $("#previewImg").attr("src", reader.result);
+                }
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -27,8 +52,8 @@
                     <li><a href="#Fav">.fav</a></li>
                     <li><a href="#Gal">.gallery</a></li>
                     <li><a href="#Blog">.blog</a></li>
-                    <li><a href="#About">.about</a></li>
-                    <li><a href="#About">.contact</a></li>
+                    <li><a href="#about">.about</a></li>
+                    <li><a href="#contact">.contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,19 +69,18 @@
             <div class="introduction">
                 <img id="SelfPortrait" src="self.jpeg" alt="photo of myself">
             </div>
-            <div class="introduction">
+            <div class="introduction" id="about">
                 <p>
                     &#60;p&#62;
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum mollitia ab deserunt aliquid
-                    accusantium
-                    illo asperiores animi nulla eos aliquam temporibus quos sunt unde, exercitationem iure corporis,
-                    adipisci
-                    nesciunt!
-                    Assumenda obcaecati quis recusandae, consequatur voluptatibus dolorem voluptate quae sed eligendi
-                    facilis
-                    magnam laboriosam hic porro, inventore commodi asperiores voluptates, consequuntur placeat. Eum modi
-                    provident labore, animi magni dignissimos voluptate!
+                    My name is Borjan Sazdov, I am 21 years old and I live in Skopje. I am an
+                    aspiring Computer Science student at "FEEIT (Faculty of electrical Engineering -
+                    Skopje)" enrolled in the 3rd year of undergraduate studies, with a passion for Full
+                    Stack Developing. Scroll down the site to explore the things that make me who I am.
                     &#60;&#47;p&#62
+
+
+
+
                 </p>
 
             </div>
@@ -287,18 +311,78 @@
                     </div>
                 </div>
 
+
+
+                <div class="post">
+                    <img id="previewImg">
+                    <p id="prikaci">
+                        <input type="file" name="photo" onchange="previewFile(this);" required>
+                    </p>
+                    <div class="likeComment">
+                        <div class="likeDiv">
+                            <button class="likebtn" id="like9">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <input type="number" id="inputs9" value="0" name="">
+                        </div>
+
+                        <div class="box">
+                            <p id="comment10" class="c1"></p>
+                            <form onsubmit="comment10()">
+                                <input class="inputComment" type="text" id="input10" placeholder="Enter comment"
+                                    autocapitalize="off" />
+                                <input type="submit" id="submitbutton" value="Add comment" hidden>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </section>
         </section>
         <section class="favorite" id="Fav">
 
             <div class="f1">
-                <h3>#astronomy</h3>
+                <h3><span class="favH3">&#60;</span> Astronomy <span class="favH3">&#62;</span></h3>
+                <div id=#astroP>
+                    <p class="blackHole" id="firstP">Black holes are a constant source of fascination to many due to
+                        their
+                        mysterious nature.
+                    </p>
+                    <p class="blackHole">
+                        They are a potent and (kind of) visible reminder that there are mysteries running wild in the
+                        universe.
+                    </p>
+                    <p class="blackHole">
+                        There are places that we can point to with our telescopes and say, yes, right there that's where
+                        physics breaks down.
+                    </p>
+                    <p class="blackHole" id="lastP">
+
+                        Hence, endless fascination.
+
+                    </p>
+                </div>
+                <div class="astro_container">
+                    <div class="outer-circle">
+                        <div class="inner-circle">
+                        </div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
 
 
             </div>
 
             <div class="f2">
-                <h3>#movies</h3>
+                <h3><span class="favH3">&#60;</span> Movies <span class="favH3">&#62;</span></h3>
 
 
                 <div class="f1container">
@@ -410,8 +494,41 @@
 
 
             <div class="f3">
-                <h3>#music</h3>
-                <p class="favtext">&#60;This section is currently under construction&#62;</p>
+                <h3><span class="favH3">&#60;</span> Music <span class="favH3">&#62;</span></h3>
+                <div class="f3container">
+                    <div class="artist">
+                        <img src="https://dancingastro-wpengine.netdna-ssl.com/wp-content/uploads/2020/08/90429603_569075417037716_9005719637200116259_n.jpg"
+                            alt="amelie lens">
+                        <p><a class="spotify" href="#spotifylink"><i class="fab fa-spotify"></i> <span>|</span> Amelie
+                                Lens
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="artist">
+                        <img src="https://i2.wp.com/electronicgroove.com/wp-content/uploads/2021/04/boris-brejcha-1.jpg?fit=940%2C627&ssl=1"
+                            alt="boris brejcha">
+                        <p><a class="spotify" href="#spotifylink"><i class="fab fa-spotify"></i> <span>|</span> Boris
+                                Brejcha
+                            </a></p>
+                    </div>
+
+                    <div class="artist">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/a29f5c7f6ed1eeff7823a0f344a1375bb2e05043a9b3f454a4c8438629200f43._SX1080_.jpg"
+                            alt="tupac">
+                        <p><a class="spotify" href="#spotifylink"><i class="fab fa-spotify"></i> <span>|</span> 2Pac
+                            </a></p>
+                    </div>
+
+                    <div class="artist">
+                        <img src="https://www.artmajeur.com/medias/standard/j/o/johnvonbrown/artwork/9494707_biggie-sn-low.jpg"
+                            alt="biggie">
+                        <p><a class="spotify" href="#spotifylink"><i class="fab fa-spotify"></i> <span>|</span> The
+                                Notorious B.I.G
+                            </a></p>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -419,13 +536,13 @@
         <section class="blog" id="Blog">
 
 
-            <form action="#">
-                <div>
+            <form id="blog-form" onsubmit="blogPost()">
+                <!-- <div>
                     <p>
                         <label for="username">Username</label>
                     </p>
                     <input type="text" placeholder="johnLocke123" id="username" required>
-                </div>
+                </div> -->
                 <div>
                     <p>
                         <label for="title">Title of the Post</label>
@@ -448,17 +565,62 @@
                         placeholder="Enter your Content"></textarea>
                 </div>
 
-                <div id="kopce"><button>Submit</button></div>
+                <div id="kopce"><button id="submit">Submit</button></div>
 
 
             </form>
 
         </section>
-        <section class="about" id="About">
-            &#60;About and Contact(Under Construciton)&#62;
+        <section class="blogPosts">
+            <div id="searchpost">
+                <label for="searchbratmi">Search Post:</label>
+                <input type="text" id="searchbratmi">
+                <button onClick="handleDelete()">Delete Post</button>
+                <input type="number" id="postNumber" placeholder="Post number">
+            </div>
+            <div id="submittedDiv">
+
+            </div>
         </section>
     </main>
-    <footer>
+    <section class="pollParent">
+        <h3><span class="favH3">&#60;</span> Survey <span class="favH3">&#62;</span></h3>
+        <p id="parag">Please take a minute of your time to fill out this form and help in the improvment of the site!
+        </p>
+        <section class="poll">
+
+            <form id="survey-form">
+
+                <p>
+                    <label for="name">Name</label>
+                </p>
+                <input id="name" type="text" required>
+
+                <p>
+                    <label for="surname">Surname</label>
+                </p>
+                <input id="surname" type="text" required>
+
+
+                <div id="gender">
+                    <label for="Male"> Male</label>
+                    <input id="Male" type="radio" name="m-f">
+                    <label for="Female"> Female</label>
+                    <input id="Female" type="radio" name="m-f">
+                </div>
+                <div id="rate">
+                    <p>Rate Us!</p>
+                    <input type="range" id="rng" name="rate" min="0" max="10" value="0" step="1">
+                </div>
+
+                <input id="opinion" type="text" placeholder="Write a Review">
+
+                <button onclick="sendSurvey()" id="submit" type="submit">Submit</button>
+
+            </form>
+        </section>
+    </section>
+    <footer id="contact">
         &#60;You can find me on&#62;
         <div class="footer">
             <a href="#linkedln"><button>LinkedIn</button></a>
@@ -469,6 +631,22 @@
         <span>&copy;All rights reserved</span>
     </footer>
     <script src=instagram.js></script>
+    <script src=blog.js></script>
+    <script>
+
+
+
+        const sendSurvey = () => {
+            event.preventDefault()
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            var result = 'Thank you for your contribution ' + name + ' ' + surname + '. We appreciate your opinion';
+            window.alert(result);
+        }
+
+    </script>
+
+
 </body>
 
 </html>
